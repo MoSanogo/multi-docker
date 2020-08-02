@@ -10,7 +10,7 @@ after_success:
     - docker build -t msanogo/mutli-nginx ./nginx
     - docker build -t msanogo/multi-server ./server
     - docker build -t msanogo/multi-worker ./worker 
-    - echo "${DOCKER_PASSWORD}" | docker login -u  "${DOCKER_ID}" --password-stdin
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     - docker push msanogo/multi-client
     - docker push msanogo/multi-nginx
     - docker push msanogo/multi-server
