@@ -7,7 +7,7 @@ scripts:
     - docker run -e CI=true msanogo/react-test yarn run test 
 after_success:
     - docker build -t msanogo/multi-client ./client
-    - docker build -t msanogo/mutli-nginx ./nginx
+    - docker build -t msanogo/multi-nginx ./nginx
     - docker build -t msanogo/multi-server ./server
     - docker build -t msanogo/multi-worker ./worker 
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
