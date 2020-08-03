@@ -21,7 +21,7 @@ deploy:
     provider: elasticbeanstalk
     region: ca-central-1
     app: multi-docker
-    env: MultiDdocker-env
+    env: MultiDocker-env
     backet_name: elasticbeanstalk-ca-central-1-082594015364
     bucket_path: multi_docker
     on:
