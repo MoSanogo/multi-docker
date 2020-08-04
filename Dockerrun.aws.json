@@ -36,6 +36,16 @@
         ],
         "links":[
             "client","server"
+        ],
+        "dependsOn": [
+            {
+                "containerName": "client",
+                "condition": "COMPLETE"
+            },
+            {
+                "containerName": "server",
+                "condition": "COMPLETE"
+            }
         ]
     }
     ]
